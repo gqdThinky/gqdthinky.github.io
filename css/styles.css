@@ -1,0 +1,186 @@
+body, html {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#bg-video {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%; 
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -1;
+   filter: blur(2px);
+   transition: filter 0.3s ease;
+   -webkit-transition: filter 0.3s ease;
+}
+
+#bg-video:hover {
+   filter: blur(1.25px);
+}
+
+.card {
+   width: 420px;
+   height: 720px;
+   background-color: white;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 17px;
+   opacity: 0.75;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: opacity 0.4s ease, width 0.4s ease, height 0.4s ease;
+   z-index: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start; /* Aligne les éléments en haut */
+
+   &:hover {
+      opacity: 0.95;
+      width: 450px;
+      height: 750px;
+   }
+
+   &:hover .logo img {
+      width: 60px;
+   }
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   margin-top: 20px;
+   margin-bottom: auto;
+}
+
+.footer {
+   font-size: 12px;
+   font-family: 'Roboto Mono', monospace;
+   margin-top: auto;
+   margin-bottom: 10px;
+   opacity: 75%;
+}
+
+.svg-container {
+   display: flex;
+   margin-top: 15px;
+   flex-direction: row;
+}
+
+.svg-item {
+   margin-right: 15px;
+}
+
+.svg-item img {
+   width: 40px;
+   height: auto;
+   transition: width 0.4s ease;
+   margin-right: 20px;
+}
+
+.card:hover .svg-item img {
+   width: 60px;
+   transition: width 0.4s ease;
+}
+
+.svg-item:last-child img {
+   margin-right: 0;
+}
+
+.logo img {
+   width: 43.5px;
+   height: auto;
+   margin-right: 10px;
+   border-radius: 23px;
+   transition: width 0.4s ease;
+}
+
+.card p {
+   font-family: 'Roboto Mono', monospace;
+   font-size: 19px;
+   text-align: center;
+   transition: font-size 0.4s ease, color 0.4s ease;
+   position: relative;
+}
+
+.card p::before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 3px;
+   background-color: black;
+   bottom: 0;
+   left: 0;
+   transform-origin: bottom right;
+   transform: scaleX(0);
+   transition: transform 0.4s ease;
+}
+
+.card:hover p {
+   font-size: 24px;
+   color: black;
+}
+
+.card:hover p::before {
+   transform-origin: bottom left;
+   transform: scaleX(1);
+}
+ 
+.devs-skill {
+   text-align: center;
+   margin-top: 30px;
+}
+
+.devs-skill h2 {
+   font-family: 'Roboto Mono', monospace;
+   font-size: 18px;
+   margin: 0;
+   position: relative;
+   transition: font-size 0.4s ease;
+}
+
+.devs-skill p {
+   font-family: 'Roboto Mono', monospace;
+   font-size: 13px;
+   margin: 0;
+   position: relative;
+   transition: font-size 0.4s ease;
+}
+
+.devs-skill h2::before,
+.devs-skill p::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.card:hover .devs-skill h2{
+   font-size: 23px;
+}
+
+.card:hover .devs-skill p {
+    font-size: 16px;
+}
+
+.devs-skill:hover h2::before,
+.devs-skill:hover p::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
