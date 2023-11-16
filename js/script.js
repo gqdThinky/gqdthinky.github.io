@@ -12,4 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     svg3.addEventListener('click', function () {
         window.open('mailto:gqdThinky@gmail.com', '_blank');
     });
+
+    ////////////////////////////////////////////////////
+
+    var btnPortfolio = document.getElementById("button-portfolio");
+
+    btnPortfolio.addEventListener('click', function () {
+        alert("⚠️ Work In Progress (WIP)! ⚠️")
+    });
 });
