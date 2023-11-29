@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ////////////////////////////////////////////////////
 
-    var btnPortfolio = document.getElementById("button-portfolio");
+    var btnPortfolio = document.getElementById("dev-button-portfolio");
 
     btnPortfolio.addEventListener('click', function () {
-        alert("⚠️ Work In Progress (WIP)! ⚠️")
+        window.location.href = 'dev_portfolio.html';
     });
 });
